@@ -1,6 +1,7 @@
 resource "aws_instance" "ac1-instance" {
   ami                    = "ami-03ededff12e34e59e"
   instance_type          = "t2.micro"
+  subnet_id              = aws_subnet.ac1-private-subnet.id
   vpc_security_group_ids = [aws_security_group.ac1-sg.id]
   key_name               = "act_clase"
   tags = {

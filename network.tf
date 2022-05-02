@@ -37,7 +37,7 @@ resource "aws_internet_gateway" "ac1-gw" {
 resource "aws_default_route_table" "ac1-route-table" {
   default_route_table_id = aws_vpc.vpc-ac1.default_route_table_id
   route {
-    cidr_block = "172.16.0.0/16"
+    cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.ac1-gw.id
   }
   tags = {
