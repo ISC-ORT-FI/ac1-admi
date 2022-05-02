@@ -2,7 +2,7 @@ resource "aws_instance" "ac1-instance" {
   ami                    = "ami-03ededff12e34e59e"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.ac1-sg.id]
-  key_name               = "vockey"
+  key_name               = "act_clase"
   tags = {
     Name      = "ac1-instance"
     terraform = "True"
@@ -11,7 +11,7 @@ resource "aws_instance" "ac1-instance" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("~/Documents/ORT/labsuser.cer")
+    private_key = file("act_clase.pem")
     host        = self.public_ip
   }
   provisioner "remote-exec" {

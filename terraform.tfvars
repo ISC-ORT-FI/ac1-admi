@@ -1,4 +1,4 @@
-perfil         = "mauricio"
+perfil         = "default"
 region         = "us-east-1"
 vpc_cidr       = "172.16.0.0/16"
 private_subnet = "172.16.1.0/24"
